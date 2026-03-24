@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌙 विकल्प शायरी</title>
+<meta name="description" content="जिंदगी के विकल्पों पर शायरी">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans Devanagari',sans-serif;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:#fff;min-height:100vh;padding:20px;}
+.container{max-width:800px;margin:0 auto;}
+header{text-align:center;padding:40px 20px;background:rgba(255,255,255,0.1);border-radius:20px;margin-bottom:30px;backdrop-filter:blur(10px);}
+h1{font-size:2.5em;margin-bottom:10px;background:linear-gradient(45deg,#ffd700,#ffed4a);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.tagline{font-size:1.2em;opacity:0.9;}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;margin:30px 0;}
+.cat-btn{padding:15px;border-radius:12px;background:rgba(255,255,255,0.2);border:none;color:white;font-size:1em;cursor:pointer;font-weight:bold;transition:0.3s;}
+.cat-btn:hover{background:#ffd700;color:#333;transform:scale(1.05);}
+.shayari{background:rgba(255,255,255,0.15);padding:25px;margin:20px 0;border-radius:15px;border-left:5px solid #ffd700;box-shadow:0 10px 30px rgba(0,0,0,0.3);}
+.shayari h3{font-size:1.4em;color:#ffd700;margin-bottom:15px;}
+.shayari p{font-size:1.1em;line-height:1.7;}
+.meaning{font-style:italic;color:#e0e0e0;margin-top:10px;padding:10px;background:rgba(255,255,255,0.1);border-radius:8px;}
+.share-btn{background:#25D366;color:white;padding:12px 25px;border:none;border-radius:25px;font-weight:bold;cursor:pointer;margin:20px 0;width:100%;font-size:1.1em;}
+footer{text-align:center;padding:30px;margin-top:40px;background:rgba(255,255,255,0.1);border-radius:15px;}
+@media(max-width:600px){h1{font-size:2em;body{padding:10px;}}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>🌙 विकल्प शायरी</h1>
+<p class="tagline">जिंदगी के चौराहों पर सही रास्ता चुनने की शायरी</p>
+</header>
+
+<div class="cat-grid">
+<button class="cat-btn" onclick="showIshq()">💕 इश्क</button>
+<button class="cat-btn" onclick="showZindagi()">🌟 जिंदगी</button>
+<button class="cat-btn" onclick="showDard()">💔 दर्द</button>
+<button class="cat-btn" onclick="showUmmeed()">✨ उम्मीद</button>
+</div>
+
+<div id="shayariBox">
+<div class="shayari">
+<h3>पहला विकल्प</h3>
+<p>दिल ने कहा चल प्यार की राह पे<br>अक्ल बोली करियर पहले चुन<br>विकल्प के इस चौराहे पे<br>खड़ा हूँ मैं, तन्हा बेचैन</p>
+<div class="meaning">प्यार vs करियर का दुविधा भरा पल</div>
+</div>
+</div>
+
+<button class="share-btn" onclick="shareNow()">📱 WhatsApp Share</button>
+<footer>© विकल्प शायरी | Free Forever</footer>
+</div>
+
+<script>
+const shayari = {
+ishq: [
+{title:"प्यार का चौराहा",text:"हाथ थाम लूँ या दिल को रोकूँ<br>वक्त कहता है इंतजार करो<br>दो रास्तों के बीच खड़ा हूँ<br>प्यार का सही विकल्प ढूँढूँ",meaning:"प्यार में कदम उठाने का संकोच"},
+{title:"खामोशी या बयाँ",text:"कह दूँ दिल की बात या चुप रहूँ<br>विकल्प के दो रंगों में<br>चुनूँगा जो दिल को भाये",meaning:"हृदय की बात कहने का दुविधा"}
+],
+zindagi: [
+{title:"करियर का चौराहा",text:"नौकरी या बिजनेस<br>सुरक्षित या जोखिम<br>विकल्प के इस मेले में\nखुद का रास्ता बनाया",meaning:"करियर के फैसले की शायरी"},
+{title:"शहर vs गाँव",text:"शहर की चमक या गाँव का सुकून<br>दोनों में अपना अपना रंग<br>विकल्प के इस मेले में खोया",meaning:"शहरी जीवन vs ग्रामीण शांति"}
+],
+dard: [
+{title:"भूल जाऊँ या याद रखूँ",text:"पुराने दर्द को भुला दूँ या सीने से लगाऊँ<br>विकल्प के दो रास्तों पर<br>चलूँ जो ले जाए नई मंजिल की ओर",meaning:"बीते दर्द से मुक्ति का संकल्प"}
+],
+ummeed: [
+{title:"हार मानूँ या लड़ूँ",text:"हार मान लूँ या फिर लड़ूँ<br>विकल्प के इस युद्ध में<br>जीत का सपना देखूँ हर पल",meaning:"निराशा के बीच आशा का चयन"}
+]};
+
+function showIshq(){showShayari(shayari.ishq)}
+function showZindagi(){showShayari(shayari.zindagi)}
+function showDard(){showShayari(shayari.dard)}
+function showUmmeed(){showShayari(shayari.ummeed)}
+
+function showShayari(data){
+let html='';
+data.forEach(s=>{
+html+=`<div class="shayari">
+<h3>${s.title}</h3>
+<p>${s.text}</p>
+<div class="meaning">${s.meaning}</div>
+</div>`;
+});
+document.getElementById('shayariBox').innerHTML=html;
+}
+
+function shareNow(){
+const text='विकल्प शायरी पढ़ो! 🌙 '+window.location.href;
+window.open('https://wa.me/?text='+encodeURIComponent(text));
+}
+</script>
+</body>
+</html>
