@@ -1,0 +1,121 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>Viklap Shayari - Dil se nikli shayariyon ka ghar</title>
+  <meta name="description" content="Dil se nikli shayariyon ka ghar – Viklap Shayari, Hindi shayari website with Love, Sad, Romantic, Friendship, Motivational Shayari">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  <!-- Responsive design के लिए【61†L331-L336】 -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav role="navigation">
+    <div class="logo">Viklap Shayari</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#shayaris">Categories</a></li>
+      <li><a href="#search-section">Search</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="hero" class="hero">
+    <div id="particles-js"></div>  <!-- Particles background -->
+    <h1>Viklap Shayari</h1>
+    <p>Dil se nikli shayariyon ka ghar</p>
+  </header>
+
+  <!-- Shayari Categories (buttons for filtering by category) -->
+  <section id="shayaris">
+    <div class="category-buttons">
+      <button onclick="filterCategory('All')">All</button>
+      <button onclick="filterCategory('Love')">Love</button>
+      <button onclick="filterCategory('Sad')">Sad</button>
+      <button onclick="filterCategory('Romantic')">Romantic</button>
+      <button onclick="filterCategory('Friendship')">Friendship</button>
+      <button onclick="filterCategory('Motivational')">Motivational</button>
+    </div>
+
+    <!-- Search Bar -->
+    <div id="search-section" class="search-box">
+      <input type="text" id="searchBar" onkeyup="filterShayari()" placeholder="Shayari khojain..." aria-label="Search Shayari">
+    </div>
+
+    <!-- Shayari Cards Container -->
+    <div class="cards-container">
+      <!-- Example Shayari Card -->
+      <div class="card" data-category="Love">
+        <p>Tujh mein meri zindagi, tujhse hi meri khushi; Ishq teri adaon pe sabse zyada fida.</p>
+        <button aria-label="Copy Shayari" onclick="copyShayari(this)">Copy</button>
+        <button aria-label="Share Shayari" onclick="shareShayari(this)">Share</button>
+      </div>
+      <div class="card" data-category="Love">
+        <p>Tere bina adhoori zindagi; teri ek muskan pe sab kuchh pura hota hai.</p>
+        <button aria-label="Copy Shayari" onclick="copyShayari(this)">Copy</button>
+        <button aria-label="Share Shayari" onclick="shareShayari(this)">Share</button>
+      </div>
+      <div class="card" data-category="Sad">
+        <p>Aansoo chupke chupke behte hain, dil ki baatein chupke chupke keh dete hain.</p>
+        <button aria-label="Copy Shayari" onclick="copyShayari(this)">Copy</button>
+        <button aria-label="Share Shayari" onclick="shareShayari(this)">Share</button>
+      </div>
+      <div class="card" data-category="Sad">
+        <p>Tanha raaton mein, dil ki udasi ke raaz, sitaron se chupke chupke baat karte hain.</p>
+        <button aria-label="Copy Shayari" onclick="copyShayari(this)">Copy</button>
+        <button aria-label="Share Shayari" onclick="shareShayari(this)">Share</button>
+      </div>
+      <div class="card" data-category="Romantic">
+        <p>Palkon pe chaand bitha kar, honton pe tera ehsaas rakhte hain.</p>
+        <button aria-label="Copy Shayari" onclick="copyShayari(this)">Copy</button>
+        <button aria-label="Share Shayari" onclick="shareShayari(this)">Share</button>
+      </div>
+      <div class="card" data-category="Romantic">
+        <p>Main toh apne khwabon mein bhi, sirf tera hi naam leta hoon.</p>
+        <button aria-label="Copy Shayari" onclick="copyShayari(this)">Copy</button>
+        <button aria-label="Share Shayari" onclick="shareShayari(this)">Share</button>
+      </div>
+      <div class="card" data-category="Friendship">
+        <p>Yaar dosti anmol hai, waqt se bhi gehra ye bandhan.</p>
+        <button aria-label="Copy Shayari" onclick="copyShayari(this)">Copy</button>
+        <button aria-label="Share Shayari" onclick="shareShayari(this)">Share</button>
+      </div>
+      <div class="card" data-category="Friendship">
+        <p>Saath chalne wala har dost, dard mein bhi khushi baant leta hai.</p>
+        <button aria-label="Copy Shayari" onclick="copyShayari(this)">Copy</button>
+        <button aria-label="Share Shayari" onclick="shareShayari(this)">Share</button>
+      </div>
+      <div class="card" data-category="Motivational">
+        <p>Hausla rakh, manzil door sahi; mehnat ki roshni se raaste khule jaate hain.</p>
+        <button aria-label="Copy Shayari" onclick="copyShayari(this)">Copy</button>
+        <button aria-label="Share Shayari" onclick="shareShayari(this)">Share</button>
+      </div>
+      <div class="card" data-category="Motivational">
+        <p>Darr se na daro, khud pe bharosa rakho; har mushkil asaan ho jayegi.</p>
+        <button aria-label="Copy Shayari" onclick="copyShayari(this)">Copy</button>
+        <button aria-label="Share Shayari" onclick="shareShayari(this)">Share</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About (placeholder) -->
+  <footer id="about">
+    <p>© 2026 Viklap Shayari – All rights reserved.</p>
+    <!-- Social icons -->
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook"><img src="facebook-icon.png" alt="Facebook"></a>
+      <a href="#" aria-label="Twitter"><img src="twitter-icon.png" alt="Twitter"></a>
+      <a href="#" aria-label="Instagram"><img src="instagram-icon.png" alt="Instagram"></a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
