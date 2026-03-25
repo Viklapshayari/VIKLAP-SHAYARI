@@ -1,292 +1,272 @@
 <!DOCTYPE html>
-<html lang="hi" dir="ltr">
+<html lang="hi">
 <head>
-    <!-- SEO Meta Tags -->
-    <title>विकल्प शायरी | 5000+ हिंदी उर्दू शायरी, स्टेटस, कोट्स | Love Sad Funny Shayari</title>
-    <meta name="description" content="विकल्प शायरी - सबसे बड़ा हिंदी उर्दू शायरी कलेक्शन। Love, Sad, Funny, Birthday, Festival सभी प्रकार की शायरी फ्री डाउनलोड। WhatsApp Status के लिए बेस्ट।">
-    <meta name="keywords" content="शायरी, hindi shayari, love shayari, sad shayari, funny shayari, birthday shayari, विकल्प शायरी">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="विकल्प शायरी | Best Hindi Shayari Collection">
-    <meta property="og:description" content="5000+ शायरी Love Sad Funny सभी कैटेगरी में">
-    <meta property="og:image" content="assets/og-image.jpg">
-    <meta property="og:url" content="https://vikalp-shayari.com">
-    
-    <!-- Responsive & PWA -->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="assets/icon-192.png">
+    <title>VIKLAP SHAYARI - प्रेम और रोमांच की शायरी</title>
+    <meta name="description" content="VIKLAP SHAYARI - सर्वश्रेष्ठ हिंदी शायरी संग्रह। प्रेम, दर्द और जीवन की शायरियाँ।">
     
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Jameel+Noori+Nastaleeq&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'hindi': ['Noto Sans Devanagari', 'sans-serif'],
-                        'urdu': ['Jameel Noori Nastaleeq', 'serif']
-                    }
-                }
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%),
+                        url("https://images.unsplash.com/photo-1501785888041-af3ef285b470") no-repeat center center/cover;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Dark overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        /* Header */
+        header {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            animation: slideDown 0.6s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
-    </script>
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        * { scrollbar-width: thin; scrollbar-color: #9333ea #f3f4f6; }
-        *::-webkit-scrollbar { width: 8px; }
-        *::-webkit-scrollbar-track { background: #f3f4f6; }
-        *::-webkit-scrollbar-thumb { background: #9333ea; border-radius: 4px; }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+        h1 {
+            font-size: clamp(32px, 8vw, 48px);
+            letter-spacing: 3px;
+            text-shadow: 0 4px 15px rgba(255, 77, 109, 0.4), 0 0 30px rgba(255, 255, 255, 0.2);
+            font-weight: 700;
+            margin-bottom: 10px;
         }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+
+        .subtitle {
+            font-size: 14px;
+            opacity: 0.8;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
-        .shayari-text {
-            font-family: 'Noto Sans Devanagari', sans-serif;
+
+        /* Search Section */
+        .search-section {
+            width: 90%;
+            max-width: 500px;
+            margin: 30px auto;
+            animation: fadeIn 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .search-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            outline: none;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+        }
+
+        .search-box input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .search-box input:focus {
+            border-color: #ff4d6d;
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 0 20px rgba(255, 77, 109, 0.3);
+        }
+
+        .search-icon {
+            font-size: 18px;
+            opacity: 0.7;
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 700px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            animation: slideUp 0.8s ease-out 0.4s both;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Glass Card */
+        .card {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 28px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: default;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: 0.6s;
+            z-index: 1;
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(255, 77, 109, 0.3), 
+                        0 0 30px rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .card:hover::before {
+            left: 100%;
+        }
+
+        /* Shayari Text */
+        .shayari {
+            font-size: 18px;
             line-height: 1.8;
-            font-size: 1.3rem;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
         }
-        .urdu-text {
-            font-family: 'Jameel Noori Nastaleeq', serif;
-            font-size: 1.5rem;
+
+        .shayari-number {
+            font-size: 12px;
+            opacity: 0.6;
+            margin-top: 10px;
+            text-align: right;
         }
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+
+        /* Button Group */
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
         }
-        .float-animation { animation: float 6s ease-in-out infinite; }
-    </style>
-</head>
 
-<body class="bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 min-h-screen text-white overflow-x-hidden">
-    
-    <!-- Header -->
-    <header class="fixed top-0 w-full z-50 glass-card backdrop-blur-xl border-b border-white/20">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- Logo -->
-            <div class="flex items-center space-x-3">
-                <div class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center">
-                    <i class="fas fa-heart text-2xl text-pink-400"></i>
-                </div>
-                <div>
-                    <h1 class="font-hindi text-2xl font-bold bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent">
-                        विकल्प शायरी
-                    </h1>
-                    <p class="text-xs opacity-75">5K+ शायरी कलेक्शन</p>
-                </div>
-            </div>
-            
-            <!-- Search & Actions -->
-            <div class="flex items-center space-x-4">
-                <!-- Search -->
-                <div class="relative hidden md:block">
-                    <input type="text" id="searchInput" placeholder="शायरी खोजें..." 
-                           class="w-64 pl-12 pr-4 py-3 rounded-2xl bg-white/20 backdrop-blur-sm border border-white/30 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-white placeholder-white/70">
-                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-white/70"></i>
-                </div>
-                
-                <!-- Theme Toggle -->
-                <button id="themeToggle" class="p-3 rounded-2xl bg-white/20 hover:bg-white/30 transition-all">
-                    <i class="fas fa-moon text-xl"></i>
-                </button>
-                
-                <!-- Mobile Menu -->
-                <button id="mobileMenu" class="md:hidden p-2">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
-        </nav>
-    </header>
+        /* Copy Button */
+        .copy-btn {
+            flex: 1;
+            padding: 11px 16px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            cursor: pointer;
+            background: rgba(255, 77, 109, 0.85);
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
 
-    <!-- Hero Section -->
-    <section class="pt-28 pb-24 px-6">
-        <div class="container mx-auto text-center">
-            <!-- Main Title -->
-            <div class="max-w-4xl mx-auto mb-12">
-                <h1 class="font-hindi text-5xl md:text-7xl font-bold mb-8 leading-tight">
-                    <span class="bg-gradient-to-r from-yellow-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">
-                        हर दिल की
-                    </span>
-                    <br>
-                    <span class="block">शायरी यहाँ</span>
-                </h1>
-                <p class="text-xl md:text-2xl opacity-90 max-w-2xl mx-auto mb-12 leading-relaxed">
-                    5000+ हिंदी उर्दू शायरी | Love Sad Funny Birthday Festival | 
-                    WhatsApp Status के लिए बेस्ट कलेक्शन
-                </p>
-                
-                <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto">
-                    <a href="shayari.html" class="group bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold py-5 px-10 rounded-3xl text-xl hover:scale-105 transform transition-all duration-300 shadow-2xl hover:shadow-yellow-500/25">
-                        <i class="fas fa-heart mr-2 group-hover:animate-pulse"></i>
-                        सभी शायरी देखें
-                    </a>
-                    <a href="#popular" class="border-2 border-white/50 hover:border-white/80 py-5 px-10 rounded-3xl text-xl font-semibold hover:bg-white/20 backdrop-blur-sm transition-all duration-300">
-                        <i class="fas fa-star mr-2"></i>
-                        पॉपुलर शायरी
-                    </a>
-                </div>
-            </div>
+        .copy-btn:hover {
+            background: #ff4d6d;
+            border-color: #ff4d6d;
+            box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+            transform: translateY(-2px);
+        }
 
-            <!-- Floating Hearts -->
-            <div class="absolute inset-0 overflow-hidden pointer-events-none">
-                <div class="float-animation absolute top-20 left-10 w-20 h-20 bg-pink-400/30 rounded-full blur-xl"></div>
-                <div class="float-animation absolute top-40 right-20 w-32 h-32 bg-yellow-400/20 rounded-full blur-2xl animation-delay-1000"></div>
-                <div class="float-animation absolute bottom-32 left-1/4 w-24 h-24 bg-orange-400/30 rounded-full blur-xl animation-delay-2000"></div>
-            </div>
-        </div>
-    </section>
+        .copy-btn:active {
+            transform: scale(0.95);
+        }
 
-    <!-- Featured Shayari -->
-    <section id="featured" class="py-24 px-6">
-        <div class="container mx-auto">
-            <div class="text-center mb-20">
-                <h2 class="font-hindi text-4xl md:text-5xl font-bold mb-6">
-                    <span class="bg-gradient-to-r from-white via-yellow-200 to-pink-300 bg-clip-text text-transparent">
-                        आज की स्पेशल शायरी
-                    </span>
-                </h2>
-                <p class="text-xl opacity-80 max-w-2xl mx-auto">हर दिन नई शायरी आपके लिए</p>
-            </div>
+        .copy-btn i {
+            font-size: 16px;
+        }
 
-            <!-- Shayari Cards -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Love Shayari -->
-                <div class="glass-card p-8 rounded-3xl hover:scale-105 transition-all duration-500 group cursor-pointer" onclick="openShayari('love')">
-                    <div class="w-20 h-20 bg-gradient-to-r from-pink-400 to-red-500 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform">
-                        <i class="fas fa-heart text-2xl text-white"></i>
-                    </div>
-                    <h3 class="font-hindi text-2xl font-bold mb-4 text-center">प्यार की शायरी</h3>
-                    <p class="shayari-text opacity-90 mb-6 leading-relaxed text-center">
-                        तेरी यादों में खोया रहता हूँ<br>
-                        हर पल तेरा इंतज़ार है<br>
-                        बिन तेरे ये जीना भी क्या जीना
-                    </p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm opacity-70">गुलज़ार</span>
-                        <div class="flex space-x-2">
-                            <button onclick="addFavorite('love1')" class="p-2 hover:bg-white/20 rounded-xl"><i class="far fa-heart"></i></button>
-                            <button onclick="shareShayari('love1')" class="p-2 hover:bg-white/20 rounded-xl"><i class="fas fa-share"></i></button>
-                        </div>
-                    </div>
-                </div>
+        /* Share Button */
+        .share-btn {
+            padding: 11px 16px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            cursor: pointer;
+            background: rgba(102, 126, 234, 0.85);
+            color: white;
+            font-size: 14px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-                <!-- Sad Shayari -->
-                <div class="glass-card p-8 rounded-3xl hover:scale-105 transition-all duration-500 group cursor-pointer" onclick="openShayari('sad')">
-                    <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12">
-                        <i class="fas fa-cloud-rain text-2xl text-white"></i>
-                    </div>
-                    <h3 class="font-hindi text-2xl font-bold mb-4 text-center">उदासी शायरी</h3>
-                    <p class="shayari-text opacity-90 mb-6 leading-relaxed text-center">
-                        टूटे हुए ख्वाबों का मलबा<br>
-                        बिखरा पड़ा है आँगन में<br>
-                        याद आती है वो पुरानी बातें
-                    </p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm opacity-70">राहत इन्दौरी</span>
-                        <div class="flex space-x-2">
-                            <button onclick="addFavorite('sad1')" class="p-2 hover:bg-white/20 rounded-xl"><i class="far fa-heart"></i></button>
-                            <button onclick="shareShayari('sad1')" class="p-2 hover:bg-white/20 rounded-xl"><i class="fas fa-share"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Funny Shayari -->
-                <div class="glass-card p-8 rounded-3xl hover:scale-105 transition-all duration-500 group cursor-pointer" onclick="openShayari('funny')">
-                    <div class="w-20 h-20 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12">
-                        <i class="fas fa-laugh text-2xl text-white"></i>
-                    </div>
-                    <h3 class="font-hindi text-2xl font-bold mb-4 text-center">मज़ेदार शायरी</h3>
-                    <p class="shayari-text opacity-90 mb-6 leading-relaxed text-center">
-                        प्यार में पड़ गए तो क्या<br>
-                        बिजली का बिल तो न आएगा<br>
-                        मोबाइल चार्जर से ही चलेगा
-                    </p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm opacity-70">बशीर बद्र</span>
-                        <div class="flex space-x-2">
-                            <button onclick="addFavorite('funny1')" class="p-2 hover:bg-white/20 rounded-xl"><i class="far fa-heart"></i></button>
-                            <button onclick="shareShayari('funny1')" class="p-2 hover:bg-white/20 rounded-xl"><i class="fas fa-share"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Popular Categories -->
-    <section id="popular" class="py-24 px-6 bg-white/10 backdrop-blur-xl rounded-3xl mx-6 -mt-12 relative z-10">
-        <div class="container mx-auto">
-            <h2 class="font-hindi text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-white via-yellow-200 to-pink-300 bg-clip-text text-transparent">
-                सबसे लोकप्रिय श्रेणियाँ
-            </h2>
-            
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                <a href="love-shayari.html" class="group p-6 rounded-2xl bg-gradient-to-br from-pink-500 to-red-600 hover:scale-110 transition-all duration-300 text-center">
-                    <i class="fas fa-heart text-3xl mb-4 group-hover:animate-bounce text-white"></i>
-                    <h4 class="font-hindi font-bold text-xl">प्यार</h4>
-                    <p class="text-sm opacity-90">1200+</p>
-                </a>
-                <a href="sad-shayari.html" class="group p-6 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 hover:scale-110 transition-all duration-300 text-center">
-                    <i class="fas fa-cloud-rain text-3xl mb-4 group-hover:animate-bounce text-white"></i>
-                    <h4 class="font-hindi font-bold text-xl">उदासी</h4>
-                    <p class="text-sm opacity-90">900+</p>
-                </a>
-                <a href="funny-shayari.html" class="group p-6 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 hover:scale-110 transition-all duration-300 text-center">
-                    <i class="fas fa-laugh text-3xl mb-4 group-hover:animate-bounce text-white"></i>
-                    <h4 class="font-hindi font-bold text-xl">हंसी</h4>
-                    <p class="text-sm opacity-90">700+</p>
-                </a>
-                <a href="birthday-shayari.html" class="group p-6 rounded-2xl bg-gradient-to-br from-yellow-500 to-orange-600 hover:scale-110 transition-all duration-300 text-center">
-                    <i class="fas fa-birthday-cake text-3xl mb-4 group-hover:animate-bounce text-white"></i>
-                    <h4 class="font-hindi font-bold text-xl">जन्मदिन</h4>
-                    <p class="text-sm opacity-90">500+</p>
-                </a>
-                <a href="friendship-shayari.html" class="group p-6 rounded-2xl bg-gradient-to-br from-purple-500 to-violet-600 hover:scale-110 transition-all duration-300 text-center">
-                    <i class="fas fa-users text-3xl mb-4 group-hover:animate-bounce text-white"></i>
-                    <h4 class="font-hindi font-bold text-xl">दोस्ती</h4>
-                    <p class="text-sm opacity-90">600+</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="py-20 px-6">
-        <div class="container mx-auto grid md:grid-cols-4 gap-8 text-center">
-            <div>
-                <div class="text-4xl font-bold text-yellow-400 mb-2">5000+</div>
-                <div class="text-lg opacity-90">शायरी</div>
-            </div>
-            <div>
-                <div class="text-4xl font-bold text-pink-400 mb-2">150+</div>
-                <div class="text-lg opacity-90">कवि</div>
-            </div>
-            <div>
-                <div class="text-4xl font-bold text-green-400 mb-2">50K+</div>
-                <div class="text-lg opacity-90">डाउनलोड</div>
-            </div>
-            <div>
-                <div class="text-4xl font-bold text-orange-400 mb-2">10K+</div>
-                <div class="text-lg opacity-90">यूज़र्स</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-16 px-6 bg-black/30 backdrop-blur-xl border-t border-white/20">
-        <div class="container mx-auto text-center">
-            <div class="flex justify-center items-center space-x-6 mb-8 flex-wrap">
-                <a href="https://wa.me/919876543210" class="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-
+        .share-btn:hover {
+            background: #667eea;
+            border-color: #667eea;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, *
+
