@@ -1,87 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="hi">
 <head>
-  <title>Viklap Shayari</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: linear-gradient(135deg, #000000, #1a1a1a);
-      color: white;
-      text-align: center;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    h1 {
-      font-size: 40px;
-      margin-top: 50px;
-      color: #ff4d4d;
-      text-shadow: 0 0 10px red;
-      animation: glow 2s infinite alternate;
-    }
+<title>VIKLAP SHAYARI</title>
 
-    @keyframes glow {
-      from { text-shadow: 0 0 5px red; }
-      to { text-shadow: 0 0 20px red; }
-    }
+<style>
 
-    .shayari {
-      margin: 30px auto;
-      width: 80%;
-      padding: 20px;
-      border-radius: 15px;
-      background: rgba(255,255,255,0.1);
-      box-shadow: 0 0 15px rgba(255,0,0,0.3);
-      font-size: 20px;
-      transition: 0.3s;
-    }
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#1f1c2c,#928dab);
+height:100vh;
+color:white;
+text-align:center;
+}
 
-    .shayari:hover {
-      transform: scale(1.05);
-      background: rgba(255,0,0,0.2);
-    }
+/* Header */
 
-    button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 10px;
-      background: red;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      margin-top: 20px;
-    }
+header{
+padding:40px;
+font-size:40px;
+font-weight:bold;
+letter-spacing:3px;
+}
 
-    button:hover {
-      background: darkred;
-    }
-  </style>
+/* Search */
+
+.search-box{
+margin:20px;
+}
+
+input{
+padding:12px;
+width:300px;
+border:none;
+border-radius:25px;
+outline:none;
+}
+
+/* Shayari Cards */
+
+.container{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+padding:20px;
+}
+
+.card{
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+padding:20px;
+width:280px;
+border-radius:20px;
+box-shadow:0 0 20px rgba(0,0,0,0.3);
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+button{
+margin-top:10px;
+padding:8px 15px;
+border:none;
+border-radius:20px;
+background:#ff4b2b;
+color:white;
+cursor:pointer;
+}
+
+/* Footer */
+
+footer{
+margin-top:40px;
+padding:20px;
+font-size:14px;
+opacity:0.7;
+}
+
+</style>
+
 </head>
 
 <body>
 
-  <h1>🔥 VIKLAP SHAYARI 🔥</h1>
+<header>
+✨ VIKLAP SHAYARI ✨
+</header>
 
-  <div class="shayari" id="text">
-    Ek alag kahani johar koi apna likhta hai
-  </div>
+<div class="search-box">
+<input type="text" placeholder="Search Shayari...">
+</div>
 
-  <button onclick="newShayari()">New Shayari</button>
+<div class="container">
 
-  <script>
-    const shayariList = [
-      "Ek alag kahani johar koi apna likhta hai",
-      "Sabr ka phal meetha hota hai",
-      "Jo mila hai usi mein khush rehna seekh lo",
-      "Zindagi ek jung hai, ladna seekh lo",
-      "Apni pehchan khud banao"
-    ];
+<div class="card">
+<p>तेरी यादों की खुशबू से महकता है दिल,
+तू पास नहीं फिर भी तेरा एहसास रहता है।</p>
+<button onclick="copyText(this)">Copy</button>
+</div>
 
-    function newShayari() {
-      let random = Math.floor(Math.random() * shayariList.length);
-      document.getElementById("text").innerText = shayariList[random];
-    }
-  </script>
+<div class="card">
+<p>कुछ रिश्ते दिल से जुड़ जाते हैं,
+फिर चाहे दूरी कितनी भी क्यों न हो।</p>
+<button onclick="copyText(this)">Copy</button>
+</div>
+
+<div class="card">
+<p>तुम्हारी मुस्कान ही मेरी पहचान है,
+वरना इस भीड़ में मैं भी अनजान हूँ।</p>
+<button onclick="copyText(this)">Copy</button>
+</div>
+
+</div>
+
+<footer>
+© 2026 VIKLAP SHAYARI
+</footer>
+
+<script>
+
+function copyText(btn){
+
+let text = btn.parentElement.querySelector("p").innerText
+
+navigator.clipboard.writeText(text)
+
+alert("Shayari Copied ❤️")
+
+}
+
+</script>
 
 </body>
 </html>
