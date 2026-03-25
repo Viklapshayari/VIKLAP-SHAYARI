@@ -1,142 +1,54 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>VIKLAP SHAYARI</title>
-
-<style>
-
-body{
-margin:0;
-font-family:Arial;
-background:linear-gradient(135deg,#1f1c2c,#928dab);
-height:100vh;
-color:white;
-text-align:center;
-}
-
-/* Header */
-
-header{
-padding:40px;
-font-size:40px;
-font-weight:bold;
-letter-spacing:3px;
-}
-
-/* Search */
-
-.search-box{
-margin:20px;
-}
-
-input{
-padding:12px;
-width:300px;
-border:none;
-border-radius:25px;
-outline:none;
-}
-
-/* Shayari Cards */
-
-.container{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:20px;
-padding:20px;
-}
-
-.card{
-background:rgba(255,255,255,0.1);
-backdrop-filter:blur(10px);
-padding:20px;
-width:280px;
-border-radius:20px;
-box-shadow:0 0 20px rgba(0,0,0,0.3);
-transition:0.3s;
-}
-
-.card:hover{
-transform:scale(1.05);
-}
-
-button{
-margin-top:10px;
-padding:8px 15px;
-border:none;
-border-radius:20px;
-background:#ff4b2b;
-color:white;
-cursor:pointer;
-}
-
-/* Footer */
-
-footer{
-margin-top:40px;
-padding:20px;
-font-size:14px;
-opacity:0.7;
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .search {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+        .search input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 300px;
+        }
+        .search button {
+            padding: 10px;
+            margin-left: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <title>Viklap Shayari</title>
 </head>
-
 <body>
-
-<header>
-✨ VIKLAP SHAYARI ✨
-</header>
-
-<div class="search-box">
-<input type="text" placeholder="Search Shayari...">
-</div>
-
-<div class="container">
-
-<div class="card">
-<p>तेरी यादों की खुशबू से महकता है दिल,
-तू पास नहीं फिर भी तेरा एहसास रहता है।</p>
-<button onclick="copyText(this)">Copy</button>
-</div>
-
-<div class="card">
-<p>कुछ रिश्ते दिल से जुड़ जाते हैं,
-फिर चाहे दूरी कितनी भी क्यों न हो।</p>
-<button onclick="copyText(this)">Copy</button>
-</div>
-
-<div class="card">
-<p>तुम्हारी मुस्कान ही मेरी पहचान है,
-वरना इस भीड़ में मैं भी अनजान हूँ।</p>
-<button onclick="copyText(this)">Copy</button>
-</div>
-
-</div>
-
-<footer>
-© 2026 VIKLAP SHAYARI
-</footer>
-
-<script>
-
-function copyText(btn){
-
-let text = btn.parentElement.querySelector("p").innerText
-
-navigator.clipboard.writeText(text)
-
-alert("Shayari Copied ❤️")
-
-}
-
-</script>
-
+    <div class="glass">
+        <h1>Welcome to Viklap Shayari</h1>
+        <div class="search">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+        <p>This is an example of a glass morphism design with search functionality.</p>
+    </div>
 </body>
 </html>
